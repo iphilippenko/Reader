@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 
 /**
@@ -54,6 +55,7 @@ public class LibFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -63,8 +65,10 @@ public class LibFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_lib, container, false);
+        ListView list = (ListView)rootView.findViewById(R.id.list);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lib, container, false);
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

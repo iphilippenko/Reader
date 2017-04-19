@@ -20,7 +20,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="book1"
+                android:text="book"
+                android:textSize="20sp"
+                android:textColor="#000000"
                 android:gravity="center_horizontal|center_vertical"/>
         </LinearLayout>
         <LinearLayout
@@ -34,7 +36,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="book1"
+                android:text="book"
+                android:textSize="20sp"
+                android:textColor="#000000"
                 android:gravity="center_horizontal|center_vertical"/>
         </LinearLayout>
         <LinearLayout
@@ -48,7 +52,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="book1"
+                android:text="book"
+                android:textSize="20sp"
+                android:textColor="#000000"
                 android:gravity="center_horizontal|center_vertical"/>
         </LinearLayout>
         <LinearLayout
@@ -62,7 +68,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="book1"
+                android:text="book"
+                android:textSize="20sp"
+                android:textColor="#000000"
                 android:gravity="center_horizontal|center_vertical"/>
         </LinearLayout>
     </LinearLayout>
