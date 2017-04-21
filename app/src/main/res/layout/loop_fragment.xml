@@ -2,134 +2,100 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="info.nightscout.androidaps.plugins.Loop.LoopFragment">
+    tools:context=".plugins.LocalProfile.LocalProfileFragment">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollView" >
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-    
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/linearBlockBackground"
+                android:text="@string/units"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/localprofile_mgdl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mgdl" />
+
+                <RadioButton
+                    android:id="@+id/localprofile_mmol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mmol" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/linearBlockBackground"
+                android:text="@string/dia"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/localprofile_dia"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:inputType="numberDecimal"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:id="@+id/localprofile_ic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/localprofile_isf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/localprofile_basal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/localprofile_target"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
             <Button
-                android:id="@+id/loop_run"
+                android:id="@+id/localprofile_profileswitch"
                 style="?android:attr/buttonStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/openapsma_run" />
-    
-            <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@color/linearBlockBackground"
-                android:orientation="vertical">
-        
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/openapsma_lastrun_label"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-                <TextView
-                    android:id="@+id/loop_lastrun"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-        
-               <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/openapsma_lastenact_label"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/send_to_pump"
+                android:textColor="@color/colorProfileSwitchButton" />
 
-                <TextView
-                    android:id="@+id/loop_lastenact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@color/linearBlockBackground"
-                android:orientation="vertical">
-        
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/loop_aps_label"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-                <TextView
-                    android:id="@+id/loop_source"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-        
-                <TextView
-                    android:id="@+id/loop_request"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-        
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@color/linearBlockBackground"
-                android:orientation="vertical">
-        
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/loop_constraintsprocessed_label"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-                <TextView
-                    android:id="@+id/loop_constraintsprocessed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-        
-            </LinearLayout>
-           <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"
-                android:background="@color/linearBlockBackground"
-                android:orientation="vertical">
-        
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/loop_setbypump_label"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-                <TextView
-                    android:id="@+id/loop_setbypump"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-        
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
